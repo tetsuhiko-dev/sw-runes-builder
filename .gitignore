@@ -1,0 +1,9 @@
+node_modules
+
+sw-runes-builder/
+
+.idea/
+
+electron-builder.yml
+
+dist/

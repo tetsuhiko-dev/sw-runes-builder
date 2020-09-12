@@ -1,0 +1,181 @@
+﻿body{
+    background-color: #3b3b3b;
+    color: aliceblue;
+    overflow: hidden;
+}
+
+.form-filter{
+    border-bottom: 3px solid #9c9c9c !important;
+}
+
+#close{
+    -webkit-app-region: no-drag;
+}
+
+.top-menu{
+    background-color: #1b1e21;
+    display: flex;
+    justify-content: space-between;
+    -webkit-app-region: drag;
+}
+
+.side-menu{
+    float: left;
+    width: 54.25vh;
+    background-color: #1d2124;
+}
+
+.overflow-area{
+    min-height: 79.1vh;
+    max-height: 79.1vh;
+}
+
+.card-monster{
+    background-color: #4e555b;
+}
+
+.img-icon{
+    width: 30px;
+    height: auto;
+}
+
+.main-div{
+    float: left;
+    width: auto;
+    height: 93vh;
+}
+
+.main-top{
+    background-color: #313131;
+    width: 158.25vh;
+    height: 13vh;
+    border-bottom: 3px solid #9c9c9c !important;
+}
+.main-body{
+    width: 158.25vh;
+    height: 80vh;
+}
+
+.body-left{
+    float: left;
+    width: 115vh;
+    height: 80vh;
+}
+
+.body-right{
+    background-image: url("../images/comingsoon.png");
+    float: right;
+    width: 43.25vh;
+    height: 80vh;
+}
+
+.rune-container{
+    width: 115vh;
+    height: 53vh;
+}
+
+.card-rune{
+    border: solid #bdbdbd 2px;
+    background-color: #585858;
+    height: 20.5vh;
+}
+
+.base-text-color{
+    color: #d3bf5e;
+}
+
+.awaken-text-color{
+    color: #d30ac7;
+}
+
+.div-monster-info{
+    min-width: 300px;
+}
+
+.img-monster{
+    width: 75px !important;
+    height: 75px !important;
+    margin-right: 20px;
+}
+
+.img-element{
+    width: 25px !important;
+    height: 25px !important;
+}
+
+.no-gutters-left{
+    margin-left: 0 !important;
+}
+
+.no-gutters-right{
+    margin-right: 0 !important;
+}
+
+.no-gutters-top{
+    margin-top: 0 !important;
+}
+
+.no-gutters-bottom{
+    margin-bottom: 0 !important;
+}
+
+.no-padding-right{
+    padding-right: 0 !important;
+}
+
+.table-custom{
+    background-color: #1d2124;
+    width: 113vh;
+    table-layout: fixed;
+}
+
+.hide{
+    display: none;
+}
+
+.form-custom{
+    height: auto !important;
+    font-size: 0.75rem !important;
+    padding: 0 0 0 0 !important;
+}
+
+.rune-bonus{
+    background-color: #1d2124;
+    height: 4vh;
+    width: 24vh;
+}
+
+.updater-zone{
+    width: 100%;
+    top:54px;
+    bottom: 0px;
+    position: absolute;
+}
+
+.updater-content{
+    position: absolute;
+    top: 300px;
+    left: 200px;
+    right: 200px;
+    text-align: center;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #747474;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #b3b3b3;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #e8e8e8;
+}
