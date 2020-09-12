@@ -24,7 +24,13 @@ function createWindow() {
     })
 
     // and load the index.html of the app.
-    mainWindow.loadFile('updater.html')
+    if(process.argv.includes("--dev")){
+        mainWindow.loadFile('index.html');
+    }
+    else{
+        mainWindow.loadFile('updater.html');
+    }
+    
     mainWindow.removeMenu();
     mainWindow.resizable = false;
     
@@ -33,7 +39,9 @@ function createWindow() {
     });
 
     // Open the DevTools.
-    //mainWindow.webContents.openDevTools()
+    if(process.argv.includes("--dev")){
+        mainWindow.webContents.openDevTools();
+    }
     
     mainWindow.on("close", function () {
         mainWindow = null;
@@ -48,7 +56,6 @@ function createWindow() {
 // Some APIs can only be used after this event occurs.
 app.whenReady().then(() => {
     createWindow()
-
     app.on('activate', function () {
         // On macOS it's common to re-create a window in the app when the
         // dock icon is clicked and there are no other windows open.
