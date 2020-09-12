@@ -418,17 +418,19 @@ $(document).ready(function () {
             $(this).data('val', newValue);
 
             if (oldValue !== -1) {
-                rune_stat[oldValue] = defaultStats[oldValue];
-                rune_innate[oldValue] = defaultInnate[oldValue]
+                rune_primary_stat[s][oldValue] = defaultRuneStats[s][oldValue];
+                rune_stat[s][oldValue] = defaultStats[oldValue];
+                rune_innate[s][oldValue] = defaultInnate[oldValue]
             }
 
-            rune_stat[newValue] = "";
-            rune_innate[newValue] = "";
+            rune_primary_stat[s][newValue] = "";
+            rune_stat[s][newValue] = "";
+            rune_innate[s][newValue] = "";
 
             getInnateText(s).text((defaultStats[newValue] === undefined ? "" : defaultStats[newValue]));
 
             for (let j = 0; j < 5; j++) {
-                setStatOption(s, j, rune_stat);
+                setStatOption(s, j, j===0?rune_primary_stat[s] : rune_stat[s]);
             }
 
             sendRunes();
