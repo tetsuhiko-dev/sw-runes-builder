@@ -523,7 +523,7 @@ $(document).ready(function () {
 
 
     IpcRenderer.on("app-version", (event, args) =>{
-        $("#title").text("Summoner Wars : Runes - v{}".format(args.version));
+        $("#title").text("Summoner Wars : Runes Builder - v{}".format(args.version));
     });
     
     IpcRenderer.send("app-version");
