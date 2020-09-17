@@ -2,8 +2,11 @@
 const Remote = require('electron').remote;
 const $ = require('jquery');
 const _ = require('lodash');
+const logger = require('electron-log')
 
 let currentMonster = undefined;
+
+
 
 $(document).ready(function () {
     $("#close").on("click", function () {
@@ -81,7 +84,12 @@ function drawMonsterCard(monster) {
 // ****************** Monster ***************** //
 
 function onClickMonster() {
-    IpcRenderer.send('getMonsterRequest', $(this).attr("monster-id"));
+    try {
+        a = 8/0;
+        IpcRenderer.send('getMonsterRequest', $(this).attr("monster-id"));
+    } catch (e) {
+        logger.error(e);
+    }
 }
 
 IpcRenderer.on('getMonsterResult', (event, arg) => {

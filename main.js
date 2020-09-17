@@ -81,8 +81,13 @@ ipcMain.on('filterMonsterRequest', (event, args) => {
 });
 
 ipcMain.on('getMonsterRequest', ((event, arg) => {
-    let monster = monsters.get(arg);
-    event.sender.send('getMonsterResult', monster);
+    try{
+        let monster = monsters.get(arg);
+        event.sender.send('getMonsterResult', monster);
+    } catch(e){
+        logger.error(e);
+    }
+    
 }));
 
 ipcMain.on('sendRuneRequest', ((event, args) => {
