@@ -1,7 +1,7 @@
 {
   "name": "sw-runes-builder",
   "productName": "Summoners war - Runes Builder",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "main.js",
   "scripts": {
     "start": "electron . --dev",
